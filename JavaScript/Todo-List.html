@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      * {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+#container {
+  width: 500px;
+  margin: 0 auto;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid #e5e5e5; */
+}
+ul li {
+  padding: 10px;
+  /* padding-left: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+ul li:hover {
+  background: #f3f3f3;
+}
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+}
+
+#list label:before {
+  content:'';
+  /* -webkit-appearance: none; */
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#list input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+#list input:checked + label:before {
+  background: #0079bf;
+} 
+#list input:checked + label {
+  text-decoration: line-through;
+}
+.delete {
+  height: 28px;
+    padding: 5px 0px;
+    border-radius: 3px;
+}
+.delete:hover {
+  background: #f2f2f2;
+  cursor: pointer;
+}
+h1 {
+  text-align: center;
+  margin-top: 30%;
+}
+.add-task {
+  width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding: 11px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 3px;
+}
+#total-tasks {
+  margin-bottom: 20px;
+  font-size: 13px;
+    margin-left: 2px;
+    color: gray;
+}
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <h1>Todo List App</h1>
+        <input type="text" placeholder="Add a task" class="add-task" id="add" data-helloworld="asdasdas">
+        <span id="total-tasks"> Total tasks:<span id="tasks-counter">0</span></span>
+        <ul id="list">
+            <li>
+                
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+
+        const tasks=[];
+        const taskList = document.getElementById("list");
+        const addtaskInput = document.getElementById("add");
+        const taskCounter = document.getElementById("tasks-counter");
+
+        console.log(`working`);
+
+        function rederList () {
+            
+        }
+
+        function markTaskAsComplete () {}
+        function deleteTask (taskId) {
+            const newtasks = tasks.filter(function(task){
+                return task.id === taskId;
+            })
+            tasks = newtasks;
+            rederList();
+            showNotification("Task deleted Successfully")
+        }
+
+        function addTask (task) {
+            if(task){
+                tasks.push(task);
+                console.log(tasks);
+                rederList();
+                showNotification("Task added Successfully")
+            }
+            showNotification("Task cannot be empty")
+        } 
+
+        function showNotification () {
+            alert("text");
+            return;
+        }
+
+        function handelInput(event){
+            if(event.key === "Enter"){
+                const text= event.target.value;
+                console.log("text:",text)
+            
+                if (!text){
+                    showNotification('the text field cannot be empty');
+                    return;
+                }
+                const task = {
+                    text:text,
+                    id:Date.now().toString(),
+                    done:false
+                }
+                event.target.value="";
+                addTask(task);
+            }
+        }
+        addtaskInput.addEventListener("keyup", handelInput);
+    </script>
+</body>
+</html>

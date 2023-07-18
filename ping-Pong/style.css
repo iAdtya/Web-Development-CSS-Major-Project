@@ -1,0 +1,70 @@
+:root
+{
+    --time-duration:6s;
+}
+body {
+    margin: 0px;
+    background-color:#D88CAB ;
+}
+h3
+{
+    margin:0px;
+}
+#rod1 {
+	position: absolute;
+	top: 0%;
+	background-color: #b57edc;
+	border: 2px solid black;
+    width: 20%;
+    box-sizing: border-box;
+    border-radius: 1.5rem;
+    height: 5vh;
+    padding:5px;
+    text-align: center;
+    margin-top: 5px;
+}
+#rod2 {
+	position: absolute;
+	bottom: 0%;
+    background-color: #b57edc;
+    border-radius: 1.5rem;
+	border: 2px solid black;
+    width: 20%;
+    box-sizing: border-box;
+    height: 5vh;
+    padding:5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+#ball {
+	height: 50px;
+    width: 50px;
+    position:absolute;
+    border-radius: 50%;
+    background-color:#38302E;
+}
+
+/* h3{
+    font-size: medium;
+} */
+
+.animate-top-right
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(2000px) translateY(-2000px);
+}
+.animate-bottom-right
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(2000px) translateY(2000px);
+}
+.animate-top-left
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(-2000px) translateY(-2000px);
+}
+.animate-bottom-left
+{
+    transition:transform linear var(--time-duration);
+    transform: translateX(-2000px) translateY(2000px);
+}

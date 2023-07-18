@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Best Coding Practices</title>
+        <link rel="shortcut icon" type="image/x-icon" href="../assets/logo.png">
+        <meta name="description" content=" this is coding website">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Chairo_sec">
+    </head>
+</html>
+<head>
+    <!-- #FORM FOR Username AND Password -->
+    <body>
+        <form>
+            <div>
+                <label for="Username">Username</label>
+                <div>
+                    <input id="Username" type="email" required placeholder="abc@example.com">
+                    <!-- <input id="Username" type="range" min="10" max="50" step="5"> -->
+                </div>
+            </div>
+            <div>   
+                <label for="password">Password</label>
+                <div>
+                    <input id="password" type="password" required>
+                </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+<!-- ******************************************************************************************************************* -->
+<!-- # use type="email" for email
+# use type="number" for number
+# use type="tel" for telephone number
+# use type="url" for url
+# use type="date" for date
+# use type="time" for time
+# use type="range" for range input
+
+
+ # use placeholder for hint when input is to accepted  -->
+ <hr>
+
+        <form>
+            <p>Gender</p>
+            <!-- radio type  -->
+            <input type="radio" name="Gender" value="female" checked>female<br>
+            <input type="radio" name="Gender" value="Male">Male<br>
+            <input type="radio" name="Gender" value="other">other<br>
+            <input type="submit">
+
+            <!-- # checkbox type -->
+            <p><b>Course done</b></p>
+            <input type="checkbox" name="Course" value="C++" checked>C++<br>
+            <input type="checkbox" name="Course" value="python">python<br>
+            <input type="checkbox" name="Course" value="React">React<br>
+        </form>
+        <hr>
+<!-- # use select tag to specifi the calender like view and use option tag to specify the options -->
+        <form action="" method="get">
+            <p>Month</p>
+            <select name="Month" multiple>
+                <option selected>jan</option>
+                <option>feb</option>
+                <option>mar</option>
+                <option>apr</option>
+            </select>
+
+            <p>share your experience</p>
+            <textarea name="experience" id="text_area" cols="30" rows="10"></textarea>
+            <br>   
+            <button type="submit">Submit</button>
+        </form>
+        <hr>
+<!-- # media tags -->
+        <br>
+        <div>
+        <audio controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <video height="200" width="200" controls>
+            <sourcesrc="movie.mp4" type="video/mp4">
+        </video>
+        <br>
+        <figure>
+            <img width="600" src="../assets/logo.png" alt="">
+            <img width="600" src="../assets/logo.png" alt="">
+            
+            
+        </figure>
+        </div>
+    </body>
+</head>

@@ -1,0 +1,107 @@
+/* div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background-color: cyan;
+    transform: scale(10,2);
+    transform: translate(60%,40%);
+    transition: 0.7s steps(10,end);
+}
+
+div:hover{
+    transform: scale(1.5) translate(100px);
+} */
+
+ /* @keyframes changeShape{
+    0%{
+        border-radius: 0%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+} */
+
+
+/* 
+div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: cyan;
+    animation: changeShape 1s ease-in-out 4 alternate;
+} */
+
+
+/* ##################### bounce the div ##################### */
+
+/* div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: cyan;
+    animation: moveDiv 1s ease-in-out alternate;
+}
+
+@keyframes moveDiv{
+    0%{
+        transform: translateY(0);
+    }
+
+    25%{
+        transform: translateY(-100px);
+    }
+
+    50%{
+        transform: translateY(100px);
+    }
+
+    75%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(50px);
+    }
+} */
+
+
+/* @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes reduceSize {
+    from {
+        height: 100px;
+        width: 100px;
+    }
+    to {
+        height: 50px;
+        width: 50px;
+    }
+    
+}
+*/
+div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: cyan;
+    /* animation-name: changeShape,rotate,reduceSize;
+    animation-duration: 0.8s,0.8s,0.8s;
+    animation-iteration-count: infinite,infinite,infinite;
+    animation-direction: alternate,alternate,alternate;  */
+
+} 

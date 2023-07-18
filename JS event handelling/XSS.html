@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin-left: 47%;
+            margin-top: 5%;
+            cursor: pointer;
+            align-items: center;
+
+        }
+        h1{
+            text-align: center;
+        }
+        #box:hover{
+            box-shadow:0px 0px 30px grey;
+        }
+
+        #outer{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            margin-left: 47%;
+            margin-top: 2%;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        #inner{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            margin-left: 25%;
+            margin-top: 25%;
+            margin-bottom: 25%;
+            cursor: pointer;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body style="display: grid;">
+    <!-- <h1 id="one">kyu be bahut uchal raha he mc </h1>
+    <h2 id="two">heading</h2>
+    <h3 id="three">heading</h3>
+
+    
+    <button id="btn">Say hello!</button> -->
+
+    <div id="box">
+ 
+    </div>
+    <h1>Box Clicked!<span id="click-count">0</span></h1>
+
+     <!-- this is keyboard events  -->
+    <input type="text" name="search" id="search"> 
+
+
+    <!-- Propogation Of events -->
+    <div id="outer">
+        <div id="inner">
+
+        </div>
+    </div>
+
+    
+
+    
+    <script type="text/javascript" src="kadwa.js"></script>
+
+</body>
+</html>
+

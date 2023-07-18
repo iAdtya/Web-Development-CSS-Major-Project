@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="cards">Get new cards</title>
+    <script>
+        const deckCard =async function() {
+         fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+        .then(res => res.json())
+        .then(data => console.log(data))
+        }
+        document.getElementById("cards").addEventListener("click", deckCard) // if u do deckCard() it will run the function right away 
+                                                                             //and not when the button is clicked
+                                                                //and this is called a callback function
+                                    //and now u can see the building block of Asynchronous JavaScript
+    
+    
+    
+    </script>                                                           
+</body>                                                                 
+</html>                                                         

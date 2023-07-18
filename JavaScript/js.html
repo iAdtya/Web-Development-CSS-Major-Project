@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Concepts App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Concepts App</h1>
+
+  <h2>Concepts:</h2>
+  <ul>
+    <li><a href="#" onclick="basicVariables()">Variables</a></li>
+    <li><a href="#" onclick="dataTypes()">Data Types</a></li>
+    <li><a href="#" onclick="conditionalStatements()">Conditional Statements</a></li>
+    <li><a href="#" onclick="loops()">Loops</a></li>
+    <li><a href="#" onclick="functions()">Functions</a></li>
+    <li><a href="#" onclick="arrays()">Arrays</a></li>
+    <li><a href="#" onclick="objects()">Objects</a></li>
+    <li><a href="#" onclick="domManipulation()">DOM Manipulation</a></li>
+    <li><a href="#" onclick="ajax()">AJAX</a></li>
+    <li><a href="#" onclick="errorHandling()">Error Handling</a></li>
+  </ul>
+
+  <div id="output">output</div>
+
+  <script>
+    // Variables
+    function basicVariables() {
+      var message = "Hello, world!";
+      document.getElementById("output").innerText = "lavde kaha khoya he";
+    }
+
+    // Data Types
+    function dataTypes() {
+      var number = 10;
+      var string = "JavaScript";
+      var boolean = true;
+      var array = [1, 2, 3];
+      var lavde = { name: "John", age: 25 };
+
+      var output = "Number: " + number + "<br>" +
+                   "String: " + string + "<br>" +
+                   "Boolean: " + boolean + "<br>" +
+                   "Array: " + array + "<br>" +
+                   "Object: " + JSON.stringify(lavde);
+
+      document.getElementById("output").innerHTML = output;
+    }
+
+    // Conditional Statements
+    function conditionalStatements() {
+      var number = 5;
+
+      if (number > 10) {
+        document.getElementById("output").innerText = "Number is greater than 10";
+      } else if (number === 10) {
+        document.getElementById("output").innerText = "Number is equal to 10";
+      } else {
+        document.getElementById("output").innerText = "Number is less than 10";
+      }
+    }
+
+    // Loops
+    function loops() {
+      var output = "";
+      for (var i = 0; i < 5; i++) {
+        output += "Iteration " + (i + 1) + "<br>";
+      }
+      document.getElementById("output").innerHTML = output;
+    }
+
+    // Functions
+    function functions() {
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
+
+      var message = greet("John");
+      document.getElementById("output").innerText = message;
+    }
+
+    // Arrays
+    function arrays() {
+        var numbers = [1, 2, 3 ,4 ,5 ,6 ,7 ,8 ,9 ,10];
+    var doubledNumbers = numbers.map(function(num, index, array) {
+        console.log("Current Value:", num);
+        console.log("Index:", index);
+        console.log("Array:", array);
+        return num * 2;
+
+        // original one 
+    //     var doubledNumbers = numbers.map(function (num) {
+    //     return num * 2;
+    //   });
+    });
+
+// console.log(doubledNumbers);
+
+      document.getElementById("output").innerText = doubledNumbers.join(", ");
+    }
+    // function pass(i){
+    //     return i*2;
+
+    // }
+
+// #################################################
+    // Objects
+    function objects() {
+      var person = {
+        name: "lavda",
+        age: 50,
+        geet: function () {
+          return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+        }
+      };
+
+      document.getElementById("output").innerText = person.geet();
+    }
+
+    // DOM Manipulation
+    function domManipulation() {
+      var element = document.createElement("p");
+      element.innerText = "New paragraph";
+      document.getElementById("output").appendChild(element);
+    }
+
+    // AJAX
+    function ajax() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://api.example.com/data", true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          document.getElementById("output").innerText = xhr.responseText;
+        }
+      };
+      xhr.send();
+    }
+
+    // Error Handling
+    function errorHandling() {
+      try {
+        nonexistentFunction();
+      } catch (error) {
+        document.getElementById("output").innerText = "Error: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
